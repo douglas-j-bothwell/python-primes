@@ -9,3 +9,10 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
+jobs:
+  build-android:
+    docker:
+      - image: cimg/android:2021.10.2
+        auth:
+          username: dbothwell
+          password: 59160e01-2308-487e-a00c-81c7613da799  # context / project UI env-var reference
